@@ -1,9 +1,28 @@
-import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 import { useState } from "react";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const navLinks = [
+    {
+      id: 1,
+      link: "Home",
+    },
+    {
+      id: 2,
+      link: "Skills",
+    },
+    {
+      id: 3,
+      link: "Projects",
+    },
+    {
+      id: 4,
+      link: "Contact",
+    },
+  ];
 
   const toggleButton = () => {
     setShowMenu(!showMenu);
@@ -14,30 +33,17 @@ const Navbar = () => {
         <h1 className="text-4xl font-signature ml-2">Grimble</h1>
       </div>
       <ul className="hidden md:flex">
-        <Link
-          className="px-4 font-medium text-gray-500 hover:scale-105 duration-200"
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="px-4 font-medium text-gray-500 hover:scale-105 duration-200"
-          to="/skills"
-        >
-          Skills
-        </Link>
-        <Link
-          className="px-4 font-medium text-gray-500 hover:scale-105 duration-200"
-          to="/projects"
-        >
-          Projects
-        </Link>
-        <Link
-          className="px-4 font-medium text-gray-500 hover:scale-105 duration-200"
-          to="/contact"
-        >
-          Contact
-        </Link>
+        {navLinks.map(({ id, link }) => (
+          <li
+            key={id}
+            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+          >
+            <Link to={link} smooth={true} duration={500}>
+              {" "}
+              {link}
+            </Link>
+          </li>
+        ))}
       </ul>
 
       <div
@@ -52,34 +58,17 @@ const Navbar = () => {
           className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
         bg-black text-gray-500 "
         >
-          <Link
-            onClick={() => setShowMenu(!showMenu)}
-            className="px-4 font-medium py-6 text-4xl text-gray-500"
-            to="/"
-          >
-            Home
-          </Link>
-          <Link
-            onClick={() => setShowMenu(!showMenu)}
-            className="px-4 font-medium py-6 text-4xl text-gray-500"
-            to="/skills"
-          >
-            Skills
-          </Link>
-          <Link
-            onClick={() => setShowMenu(!showMenu)}
-            className="px-4 font-medium py-6 text-4xl text-gray-500"
-            to="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            onClick={() => setShowMenu(!showMenu)}
-            className="px-4 font-medium py-6 text-4xl text-gray-500"
-            to="/contact"
-          >
-            Contact
-          </Link>
+          {navLinks.map(({ id, link }) => (
+            <li
+              key={id}
+              className="px-4 font-medium py-6 text-4xl text-gray-500"
+            >
+              <Link onClick={() => setShowMenu(!showMenu)} to={link} smooth={true} duration={500}>
+                {" "}
+                {link}
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </div>

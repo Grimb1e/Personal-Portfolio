@@ -3,7 +3,7 @@ import { SkillList } from "../helper/SkillList";
 
 const Skills = () => {
   return (
-    <div className="bg-black h-screen">
+    <div id="Skills" className="bg-black h-screen">
     <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
       <div>
         <p className="text-6xl font-bold border-gray-500 p-2 text-center">

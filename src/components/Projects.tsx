@@ -2,7 +2,7 @@ import { ProjectList } from "../helper/ProjectList";
 
 const Projects = () => {
   return (
-    <div className="bg-black min-h-screen">
+    <div id="Projects" className="bg-black min-h-screen">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
           <p className="text-6xl font-bold border-gray-500 p-2 text-center">
