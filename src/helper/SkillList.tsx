@@ -9,26 +9,32 @@ export const SkillList = [
   {
     name: "HTML",
     image: Html,
+    style: "shadow-orange-500",
   },
   {
     name: "CSS",
     image: Css,
+    style: "shadow-blue-500",
   },
   {
     name: "Typescript",
     image: Typescript,
+    style: "shadow-blue-600",
   },
   {
     name: "React",
     image: React,
+    style: "shadow-blue-600",
   },
   {
     name: "Tailwind",
     image: Tailwind,
+    style: "shadow-sky-400",
   },
   {
     name: "npm",
-    image: NPM
+    image: NPM,
+    style: "shadow-red-500",
   }
  
 ];

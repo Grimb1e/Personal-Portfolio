@@ -15,9 +15,9 @@ const Skills = () => {
       </div>
 
       <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-        {SkillList.map(({ image, name }) => (
-          <div className="hover:scale-105 duration-500 py-8 bg-black border border-gray-700 rounded-md">
-            <img src={image} alt="" className="w-20 mx-auto " />
+        {SkillList.map(({ image, name, style }) => (
+          <div className={` shadow-inner ${style}  py-8  bg-black border-gray-700 rounded-md`}>
+            <img src={image} alt="" className="w-20 mx-auto hover:scale-105 duration-500" />
             <p className="mt-4">{name}</p>
           </div>
         ))}

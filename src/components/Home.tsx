@@ -1,22 +1,19 @@
 import Typewriter from "typewriter-effect";
 
-
 const Home = () => {
   return (
     <div id="Home" className="h-screen w-full bg-black">
       <div className="min-h-screen flex flex-col justify-center items-center p-5 text-center">
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-6xl  sm:text-5xl font-bold text-white">
-           <Typewriter
-              options={{
-                strings: [
-                  "Welcome to my Portfolio",
-                  "HI! I'm Grimble",
-                  "I'm a Software Developer",
-                ],
-                autoStart: true,
-
-                loop: true,
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("HI! i'm Grimble")
+                  .callFunction((state) => {
+                    state.elements.cursor.style.display = "none";
+                  })
+                  .start();
               }}
             />
           </h2>

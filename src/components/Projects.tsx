@@ -13,7 +13,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-4 sm:px-8 lg:px-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center px-12 sm:px-0">
           {ProjectList.map(({ title, image }) => (
             <div
               key={title}
@@ -22,10 +22,10 @@ const Projects = () => {
               <img src={image} alt="" className="rounded-t-md w-full" />
               <h2 className="mt-4">{title}</h2>
               <div className="flex items-center justify-center">
-                <button className="rounded-lg w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button>
-                <button className="rounded-lg w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Code
                 </button>
               </div>
