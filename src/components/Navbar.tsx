@@ -5,25 +5,6 @@ import { useState } from "react";
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const navLinks = [
-    {
-      id: 1,
-      link: "Home",
-    },
-    {
-      id: 2,
-      link: "Skills",
-    },
-    {
-      id: 3,
-      link: "Projects",
-    },
-    {
-      id: 4,
-      link: "Contact",
-    },
-  ];
-
   const toggleButton = () => {
     setShowMenu(!showMenu);
   };
@@ -33,17 +14,26 @@ const Navbar = () => {
         <h1 className="text-4xl font-signature ml-2">Grimble</h1>
       </div>
       <ul className="hidden md:flex">
-        {navLinks.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth={true} duration={500}>
-              {" "}
-              {link}
-            </Link>
-          </li>
-        ))}
+        <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <Link to="Home" smooth={true} duration={500}>
+            home
+          </Link>
+        </li>
+        <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <Link to="Skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <Link to="Projects" smooth={true} duration={500}>
+            Project
+          </Link>
+        </li>
+        <li className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <Link to="Contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       <div
@@ -58,17 +48,26 @@ const Navbar = () => {
           className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen 
         bg-black text-gray-500 "
         >
-          {navLinks.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 font-medium py-6 text-4xl text-gray-500"
-            >
-              <Link onClick={() => setShowMenu(!showMenu)} to={link} smooth={true} duration={500}>
-                {" "}
-                {link}
-              </Link>
-            </li>
-          ))}
+          <li className="px-4 font-medium py-6 text-4xl text-gray-500">
+          <Link to="Home" smooth={true} duration={500}>
+            home
+          </Link>
+        </li>
+        <li className="px-4 font-medium py-6 text-4xl text-gray-500">
+          <Link to="Skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className="px-4 font-medium py-6 text-4xl text-gray-500">
+          <Link to="Projects" smooth={true} duration={500}>
+            Project
+          </Link>
+        </li>
+        <li className="px-4 font-medium py-6 text-4xl text-gray-500">
+          <Link to="Contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
         </ul>
       )}
     </div>

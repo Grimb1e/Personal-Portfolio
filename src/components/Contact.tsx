@@ -3,10 +3,10 @@ const Contact = () => {
     <div id="Contact" className="w-full h-screen bg-black p-4 text-white">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
-          <p className="text-6xl font-bold border-gray-500 p-2 text-center">
+          <p className="text-4xl font-bold border-gray-500 p-2 text-center">
             Contact
           </p>
-          <p className="py-6 text-2xl text-gray-500 text-center">
+          <p className="py-6 text-gray-500 text-center">
             Submit the form below to get in touch with me
           </p>
         </div>

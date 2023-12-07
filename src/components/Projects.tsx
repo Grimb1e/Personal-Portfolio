@@ -3,12 +3,12 @@ import { ProjectList } from "../helper/ProjectList";
 const Projects = () => {
   return (
     <div id="Projects" className="bg-black w-full md:h-screen">
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+      <div className="pt-10 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <p className="text-6xl font-bold border-gray-500 p-2 text-center">
+          <p className="text-4xl font-bold border-gray-500 p-2 text-center">
             Projects
           </p>
-          <p className="py-6 text-2xl text-gray-500 text-center">
+          <p className="py-6 text-gray-500 text-center">
             Check out some of my work right here
           </p>
         </div>
